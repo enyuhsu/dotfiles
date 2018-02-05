@@ -57,12 +57,6 @@ else
   suggest screenfetch https://github.com/KittyKatt/screenFetch
 fi
 
-export NVM_DIR="/Users/andy/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && {
-  . "$NVM_DIR/nvm.sh"  # This loads nvm
-  export NODE_PATH="$HOME/.nvm/versions/node/$(node -v)/lib/node_modules"
-}
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ]; then
   PATH="$HOME/bin:$PATH"
@@ -223,6 +217,8 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+eval $(thefuck --alias oops)
+
 cd() { builtin cd "$@" && printf "\033c" && ll; }
 pushd() { builtin pushd "$@" && printf "\033c"; ll; }
 mkcd() { mkdir -p "$1" && cd "$1"; }
@@ -328,3 +324,7 @@ export PATH="$HOME/.yarn/bin:$HOME/Downloads/spark-2.0.2-bin-hadoop2.7/bin:$PATH
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -8,6 +8,7 @@ alias mkdir='mkdir -pv'
 alias ls='ls -Gp'
 alias ll='ls -Glpa'
 alias less='less -FSRXc'
+alias nr='npm run'
 
 # write the zsh commands for going up directories by typing a number of dots
 DOTS=..

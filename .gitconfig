@@ -21,6 +21,7 @@
   a = add .
   ci = commit --verbose
   s = status --short
+  st = status
   ass = "!git add . ; git s"
   see = "!gitsee"
   rr = "!git ls-files -dz | xargs -0 git rm"
@@ -40,10 +41,12 @@
 
 
 [user]
-  name = Andrew Carlson
-  email = acarl005@g.ucla.edu
+  name = Enyu Hsu
+  email = enyu@factual.com
 
 
 [credential]
   helper = osxkeychain
 
+[merge]
+	conflictstyle = diff3
