@@ -74,9 +74,9 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -92,5 +92,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh ]
+alias finflux='influx -host influxdb.metrics.ops.marathon.la.mesos.factual.com -port 8086'
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
