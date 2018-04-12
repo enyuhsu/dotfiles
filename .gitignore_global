@@ -5,3 +5,5 @@ node_modules
 *.swp
 yarn.lock
 package-lock.json
+pre-commit
+git-hooks

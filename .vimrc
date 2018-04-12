@@ -2,6 +2,7 @@ set nocompatible
 filetype off 
 
 set rtp^=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 
 call vundle#begin()
 
@@ -139,3 +140,7 @@ function! MaximizeToggle()
     only
   endif
 endfunction
+
+noremap <C-P> :FZF<CR>
+
+autocmd filetype crontab setlocal nobackup nowritebackup
