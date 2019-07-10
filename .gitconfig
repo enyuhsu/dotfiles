@@ -39,6 +39,9 @@
   # Edit the last commit
   amend= commit --verbose --amend
 
+  # delete all branches that have been merged
+  bc = "branch --merged | grep -v \"(master|develop)\" | xargs git branch -d"
+
 
 [user]
   name = Enyu Hsu

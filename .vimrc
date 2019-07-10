@@ -1,5 +1,5 @@
 set nocompatible
-filetype off 
+filetype off
 
 set rtp^=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
@@ -20,6 +20,8 @@ Plugin 'kchmck/vim-coffee-script' " coffeescript syntax highlighter
 Plugin 'tpope/vim-fugitive' " git wrapper
 Plugin 'tpope/vim-surround' " git wrapper
 Plugin 'junegunn/fzf.vim' " fuzzy finder
+Plugin 'leafgarland/typescript-vim' " typescript syntax highlighter
+Plugin 'mileszs/ack.vim' " ack inside vim
 
 call vundle#end()
 
@@ -36,7 +38,7 @@ set autoindent
 set smartindent " indent as you type
 set backspace=indent,eol,start " enable backspace button
 set laststatus=2
-set statusline=%f\ %m%=%c,%l/%L\ 
+set statusline=%f\ %m%=%c,%l/%L\
 set scrolloff=15 " vim will automatically adjust viewport to leave at least 15 lines above and below cursor when possible"
 set incsearch " highight search incrementally
 set ignorecase " searches are case insensitive
@@ -144,3 +146,4 @@ endfunction
 noremap <C-P> :FZF<CR>
 
 autocmd filetype crontab setlocal nobackup nowritebackup
+autocmd BufWritePre * %s/\s\+$//e

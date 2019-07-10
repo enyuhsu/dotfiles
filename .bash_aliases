@@ -27,5 +27,14 @@ alias chrome="open -a /Applications/Google\ Chrome.app/"
 alias finflux='influx -host influxdb.metrics.ops.marathon.la.mesos.factual.com -port 8086'
 
 # front docker dev shortcuts
-alias bds='./bin/docker/server'
+alias bda='./bin/docker/audience-v2-dev'
 alias bdb='./bin/docker/bash'
+alias bdc='./bin/docker/container'
+alias bdd='./bin/docker/data-preview-v2-dev'
+alias bdm='./bin/docker/migrate'
+alias bdr='./bin/docker/remigrate'
+alias bds='./bin/docker/server'
+
+alias devbox='ssh -p 42068 enyu@enyu-devbox.marathon.la.mesos.factual.com'
+
+alias rn='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'

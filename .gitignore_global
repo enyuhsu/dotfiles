@@ -2,8 +2,10 @@ npm-debug.log
 node_modules
 .DS_Store
 .sass-cache/
+*.swo
 *.swp
 yarn.lock
 package-lock.json
 pre-commit
 git-hooks
+my-init
