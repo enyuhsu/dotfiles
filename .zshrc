@@ -89,3 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Source aliases file
 source $HOME/.aliases
+
+[[ -s /Users/enyuhsu/.autojump/etc/profile.d/autojump.sh ]] && source /Users/enyuhsu/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
