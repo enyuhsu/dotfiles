@@ -1,0 +1,24 @@
+# shell stuff
+alias grep='grep --exclude-dir=node_modules'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias ls='ls -Gp'
+alias ll='ls -Glpa'
+alias less='less -FSRXc'
+alias nr='npm run'
+alias pip=/usr/local/bin/pip3
+alias python=/usr/local/bin/python3
+
+# write the zsh commands for going up directories by typing a number of dots
+DOTS=..
+ARG=..
+for i in `seq 1 11`; do
+  alias $DOTS="cd $ARG"
+  DOTS="${DOTS}."
+  ARG="${ARG}/.."
+done
+
+alias e=$EDITOR
+
+alias rn='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
