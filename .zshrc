@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/enyuhsu/.oh-my-zsh"
+export ZSH="/Users/enyu/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -91,5 +91,16 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
 [[ -s /Users/enyuhsu/.autojump/etc/profile.d/autojump.sh ]] && source /Users/enyuhsu/.autojump/etc/profile.d/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 autoload -U compinit && compinit -u
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/enyu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/enyu/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/enyu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/enyu/google-cloud-sdk/completion.zsh.inc'; fi

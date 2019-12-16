@@ -4,8 +4,8 @@ node_modules
 .sass-cache/
 *.swo
 *.swp
-yarn.lock
-package-lock.json
 pre-commit
 git-hooks
 my-init
+*.hjson
+package-lock.json
