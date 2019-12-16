@@ -104,3 +104,5 @@ if [ -f '/Users/enyu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/enyu/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/enyu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/enyu/google-cloud-sdk/completion.zsh.inc'; fi
+
+# test
